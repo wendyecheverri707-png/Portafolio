@@ -87,14 +87,14 @@ with col3:
 with col4: 
  st.subheader("De la regresión lineal a la logísitica")
  image = Image.open('Chat_pdf.png')
- st.image(image, width=190)
+ st.image(image, width=200)
  st.write("En la siguiente enlace veremos una app de regresión Logística interactiva") 
  url = "https://appregresionlogisticapy-ku965ravxq7nrxgi4pihpq.streamlit.app/"
  st.write(f"[Enlace]({url})")
 
  st.subheader("Clasificación Knn")
  image = Image.open('OIG4.jpg')
- st.image(image, width=200)
+ st.image(image, width=190)
  st.write("En la siguiente enlace veremos una app que explora K vecinos más cercanos (KNN)") 
  url = "https://c2zlpl39ccubjahxtsc2pg.streamlit.app/"
  st.write(f"[Enlace]({url})")

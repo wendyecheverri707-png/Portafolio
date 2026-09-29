@@ -14,7 +14,7 @@ with st.sidebar:
 url_ia="https://sites.google.com/view/aplicacionesdeia/inicio"
 st.subheader("En el siguiente enlace puedes encontrar páginas y ejercicios prácticos")
 st.write(f"Enlace para páginas y ejercicios: [Enlace]({url_ia})")
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
 
 with col1:
  
@@ -82,6 +82,28 @@ with col3:
  st.image(image, width=200)
  st.write("En la siguiente enlace veremos una app con Datos reales de temperatura y humedad tomados por un sensor IoT, usados para entrenar un modelo de regresión lineal que predice la sensación térmica") 
  url = "https://ncnfepgfhuhlq32thbl6u9.streamlit.app/"
+ st.write(f"[Enlace]({url})")
+
+with col4: 
+ st.subheader("De la regresión lineal a la logísitica")
+ image = Image.open('Chat_pdf.png')
+ st.image(image, width=190)
+ st.write("En la siguiente enlace veremos una app de regresión Logística interactiva") 
+ url = "https://appregresionlogisticapy-ku965ravxq7nrxgi4pihpq.streamlit.app/"
+ st.write(f"[Enlace]({url})")
+
+ st.subheader("Clasificación Knn")
+ image = Image.open('OIG4.jpg')
+ st.image(image, width=200)
+ st.write("En la siguiente enlace veremos una app que explora K vecinos más cercanos (KNN)") 
+ url = "https://c2zlpl39ccubjahxtsc2pg.streamlit.app/"
+ st.write(f"[Enlace]({url})")
+ 
+ st.subheader("Aplicación Knn")
+ image = Image.open('OIG6.jpg')
+ st.image(image, width=200)
+ st.write("En la siguiente enlace veremos una app que explora KNN con datos de suelos de AGROSAVIA") 
+ url = "https://c2zlpl39ccubjahxtsc2pg.streamlit.app/"
  st.write(f"[Enlace]({url})")
 
 

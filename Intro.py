@@ -1,5 +1,14 @@
 import streamlit as st
-from PIL import Image
+from PIL import Image, ImageOps
+
+def cargar_imagen_estandar(ruta_imagen):
+    imagen = Image.open(ruta_imagen)
+    # Define el tamaño fijo que quieres (Ancho, Alto) en píxeles. 
+    # 400x250 es un buen tamaño horizontal.
+    tamano_fijo = (400, 250) 
+    # ImageOps.fit recorta la imagen centrándola para que no se vea estirada o deforme
+    imagen_recortada = ImageOps.fit(imagen, tamano_fijo, Image.Resampling.LANCZOS)
+    return imagen_recortada
 
 st.title("Aplicaciones de Inteligencia Artificial.")
 
@@ -21,14 +30,14 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
     st.subheader("Vectores y Matrices")
-    image = Image.open('txt_to_audio2.png')
+    image = cargar_imagen_estandar('Vectores y matrices.png')
     st.image(image, use_container_width=True)
     st.write("En la siguiente enlace veremos una aplicación de frutas para verificar que los datos son vectores y matrices, y aprender es transformar esos vectores de un espacio a otro.") 
     url = "https://frutasapppy-cddzbmoos3hrekqyvqybpj.streamlit.app/"
     st.write(f"[Enlace]({url})")
 
     st.subheader("Calculo aplicado, gradiente")
-    image = Image.open('txt_to_audio.png')
+    image = cargar_imagen_estandar('Gradiente.png')
     st.image(image, use_container_width=True)
     st.write("En la siguiente enlace veremos una app que nos permite explorar cómo las derivadas y el gradiente permiten transformar un problema matemático en un proceso computacional de búsqueda y optimización.") 
     url = "https://appgradientpy-baegvfk4xabfhbs8x5rd7c.streamlit.app/"

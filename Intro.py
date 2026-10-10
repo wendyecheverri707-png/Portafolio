@@ -10,20 +10,20 @@ def cargar_imagen_estandar(ruta_imagen):
     imagen_recortada = ImageOps.fit(imagen, tamano_fijo, Image.Resampling.LANCZOS)
     return imagen_recortada
 
-st.title("Aplicaciones de Inteligencia Artificial.")
+st.title("Portafolio de Proyectos: Computación Avanzada e IA")
 
 with st.sidebar:
-    st.subheader("Aplicaciones con Inteligencia Artificial.")
+    st.subheader("Acerca de este Portafolio")
     parrafo = (
-        "La inteligencia artificial permite mejorar la toma de decisiones con el uso de datos, "
-        "automatizar tareas rutinarias y proporcionar análisis avanzados en tiempo real, lo que "
-        "resulta en una mayor eficiencia y precisión en diversos campos."
+        "Esta plataforma recopila las aplicaciones desarrolladas durante el módulo de Programación Avanzada. "
+        "Su propósito es demostrar la implementación de algoritmos de analítica de datos e inteligencia artificial "
+        "para resolver retos del sector productivo en el marco de la Cuarta Revolución Industrial.\n\n"
+        "Como futuros ingenieros de software, buscamos integrar el procesamiento de datos para optimizar procesos, "
+        "disminuir costos y mejorar la toma de decisiones, aportando directamente al ecosistema de innovación "
+        "tecnológica de la región."
     )
     st.write(parrafo)
 
-url_ia="https://sites.google.com/view/aplicacionesdeia/inicio"
-st.subheader("En el siguiente enlace puedes encontrar páginas y ejercicios prácticos")
-st.write(f"Enlace para páginas y ejercicios: [Enlace]({url_ia})")
 
 st.write("---") # Una línea divisoria sutil para separar el encabezado de las aplicaciones
 
